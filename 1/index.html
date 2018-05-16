@@ -1,4 +1,6 @@
-<!-- En una página con muchas imágenes mostrar una alerta cuando esté
+<!--
+
+En una página con muchas imágenes mostrar una alerta cuando esté
 cargado el DOM y otra después que las imágenes se hayan cargado.
 
 Tip: Investigar el evento window.onload
@@ -26,12 +28,14 @@ Tip: Investigar el evento window.onload
 
   	<script>
 		
-		alert("El DOM se cargó!");
-		$(document).ready(function($){ 
+		$(window).on('load', function(){
+			alert("El DOM se cargó!");
+		})
+		
+		$(document).ready(function(){ 
 			alert("Contenido?")
 		});
   		
   	</script>
-S
   </body>
 </html>

@@ -11,9 +11,33 @@ de un segundo, al volver hacer click debe volver a estar en blanco y negro.
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title></title>
+    <title>Ejercicio más dificil de Jquery</title>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+
+    <style>
+    	img{
+    		transition: 1s;
+    		filter: grayscale(100%);
+    	}
+    	.blackwhite{
+    		filter: none;
+    	}
+    </style>
+
   </head>
   <body>
+
+  	  	<img src="https://i.imgflip.com/1cik8g.jpg" alt="">
+  		<img src="https://i.imgflip.com/1cik8g.jpg" alt="">
+  		<img src="https://i.imgflip.com/1cik8g.jpg" alt="">
+  		<img src="https://i.imgflip.com/1cik8g.jpg" alt="">
+
+  		<script>
+  			$("img").on("click", function (){
+    			$(this).first().toggleClass("blackwhite");
+			});
+  		</script>
 
   </body>
 </html>
